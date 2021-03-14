@@ -14,6 +14,10 @@
 
 include device/sony/ganges/PlatformConfig.mk
 
+# SDM636 has fancier big cores
+TARGET_CPU_VARIANT_RUNTIME := cortex-a73
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
+
 TARGET_BOOTLOADER_BOARD_NAME := unknown
 ifneq (,$(filter %i3213,$(TARGET_PRODUCT)))
 TARGET_BOOTLOADER_BOARD_NAME := I3213
